@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "0c5973fb-f1bf-4fa2-a3c1-e7904ecfb84d",
+		"name": "Game Development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39477900"
+	},
+	"item": [
+		{
+			"name": "User Authentication",
+			"item": [
+				{
+					"name": "user-signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"anandu sunil \",\r\n    \"email\": \"a41436751@gmail.com\",\r\n    \"phone\": \"9961729915\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"a41436751@gmail.com\",\r\n    \"otp\": \"446808\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"a41436751@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "user-profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"anandu sunil p\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Leagues",
+			"item": [
+				{
+					"name": "create-leagues",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Premier League\",\r\n  \"prize_pool\": 5000,\r\n  \"start_time\": \"2024-10-26T10:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/leagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-leagues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/leagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "league-join",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"league_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/leagues/join",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"leagues",
+								"join"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Teams",
+			"item": [
+				{
+					"name": "create-leageue-team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"team sachin\",\r\n    \"player_id\": 1,\r\n    \"score\": 33.1,\r\n    \"league_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/league/team",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"league",
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-tournament-teamA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"team kohli\",\r\n    \"player_id\": 1,\r\n    \"score\": 1.0,\r\n    \"tournament_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/tournament/teamA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament",
+								"teamA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-tournament-teamB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"team sanjay\",\r\n    \"player_id\": 1,\r\n    \"score\": 1.0,\r\n    \"tournament_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/tournament/teamB",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament",
+								"teamB"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Tournament",
+			"item": [
+				{
+					"name": "create-tournament",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Champion finals\",\r\n  \"prize_pool\": 10000,\r\n  \"start_time\": \"2024-10-26T10:00:00Z\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/tournament",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-tournament",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/tournament",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tournament-join",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tournament_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/tournament/join",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament",
+								"join"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leagues Prize and Result Distribution",
+			"item": [
+				{
+					"name": "leagues-prize-distribution",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/leagues/prize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"leagues",
+								"prize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "leagues-result",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/leagues/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"leagues",
+								"result"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tournament Prize and Result Distribution",
+			"item": [
+				{
+					"name": "tournament-result",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/tournament/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament",
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tournament-prize",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhNDE0MzY3NTFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MzA3OTc1NTR9.WPLN8V4SjqaUzjo9RgXDx9QYW5oR28SFPV0aBDl2nXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/tournament/prize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"tournament",
+								"prize"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
